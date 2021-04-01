@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Seattle-Trust-Company/SDX#readme",
   "dependencies": {
-    "truffle": "^5.3.0"
+    "solc": "^0.8.3",
+    "truffle": "^5.1.65"
   }
 }
