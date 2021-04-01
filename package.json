@@ -1,0 +1,25 @@
+{
+  "name": "sdx",
+  "version": "0.0.1",
+  "description": "ERC-20 contracts deployed as part of the SDX",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seattle-Trust-Company/SDX.git"
+  },
+  "author": "Seattle Trust Company",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Seattle-Trust-Company/SDX/issues"
+  },
+  "homepage": "https://github.com/Seattle-Trust-Company/SDX#readme",
+  "dependencies": {
+    "truffle": "^5.3.0"
+  }
+}
