@@ -21,14 +21,14 @@ import "./zeppelin/SafeMath.sol";
 /** @title GenericShare **/
 contract GenericShare  {
 
-    /** @sect MATH **/
+    /** MATH **/
 
     // Libraries
     using SafeMath for uint256;
 
 
 
-    /** @sect DATA **/
+    /** DATA **/
 
     // Initialization Data
     bool private initialized = false;
@@ -36,8 +36,8 @@ contract GenericShare  {
     // ERC20 Basic Data
     mapping(address => uint256) internal balances;
     uint256 internal totalSupply_;
-    string public constant name; // solium-disable-line
-    string public constant symbol; // solium-disable-line uppercase
+    string public name; // solium-disable-line
+    string public symbol; // solium-disable-line uppercase
     uint8 public constant decimals = 18; // solium-disable-line uppercase
 
     // ERC20 Data
@@ -70,7 +70,7 @@ contract GenericShare  {
 
 
 
-    /** @sect EVENTS **/
+    /** EVENTS **/
 
     // ERC20 Basic Events
     event Transfer(address indexed from, address indexed to, uint256 value);
@@ -106,7 +106,7 @@ contract GenericShare  {
 
 
 
-    /** @sect INITIALIZATION FUNCTIONS **/
+    /** INITIALIZATION FUNCTIONS **/
 
     /// @dev sets 0 initial tokens, the owner, the supplyController,
     /// ... the fee controller and fee recipient.
@@ -122,7 +122,6 @@ contract GenericShare  {
         feeRate = 0;
         feeController = msg.sender;
         feeRecipient = msg.sender;
-        initializeDomainSeparator();
         initialized = true;
     }
 
@@ -139,7 +138,7 @@ contract GenericShare  {
 
 
 
-    /** @sect ERC20 BASIC FUNCTIONALITY **/
+    /** ERC20 BASIC FUNCTIONALITY **/
 
     /// @dev Total number of tokens in existence
     function totalSupply() public view returns (uint256) {
