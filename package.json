@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test"
+    "test": "truffle test",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,16 @@
     "url": "https://github.com/Seattle-Trust-Company/SDX/issues"
   },
   "homepage": "https://github.com/Seattle-Trust-Company/SDX#readme",
-  "dependencies": {
-    "solc": "^0.8.3",
-    "truffle": "^5.1.65"
+  "devDependencies": {
+    "@openzeppelin/upgrades": "^2.8.0",
+    "@truffle/hdwallet-provider": "^1.2.1",
+    "solc": "^0.4.24",
+    "solium": "^1.2.5",
+    "truffle": "^5.1.63"
+  },
+  "resolutions": {
+    "axios": "^0.21.1",
+    "elliptic": "^6.0.0",
+    "diff": "^3.5.0"
   }
 }
