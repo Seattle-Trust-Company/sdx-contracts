@@ -2,7 +2,7 @@ pragma solidity 0.4.24;
 pragma experimental "v0.5.0";
 
 
-import "./zeppelin/SafeMath.sol";
+import "../zeppelin/SafeMath.sol";
 
 
 /**
@@ -18,8 +18,8 @@ import "./zeppelin/SafeMath.sol";
  * with insufficient funds since no tokens will be issued there.
  */
 
-/** @title GenericShare **/
-contract GenericShare  {
+/** @title Generic **/
+contract Generic  {
 
     /** MATH **/
 
@@ -36,8 +36,6 @@ contract GenericShare  {
     // ERC20 Basic Data
     mapping(address => uint256) internal balances;
     uint256 internal totalSupply_;
-    string public name; // solium-disable-line
-    string public symbol; // solium-disable-line uppercase
     uint8 public constant decimals = 18; // solium-disable-line uppercase
 
     // ERC20 Data
@@ -129,9 +127,7 @@ contract GenericShare  {
     /// ... contract is initialized. An uncontrolled implementation
     /// ... contract might lead to misleading state
     /// ... for users who accidentally interact with it.
-    constructor(string _name, string _symbol) public {
-        name = _name;
-        symbol = _symbol;
+    constructor() public {
         initialize();
         pause();
     }
