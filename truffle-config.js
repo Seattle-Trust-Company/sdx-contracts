@@ -6,6 +6,9 @@
 
 module.exports = {
 
+  // Recursively Compile Contracts
+  contracts_directory: "./contracts",
+
   // Networks
   networks: {
     development: {
