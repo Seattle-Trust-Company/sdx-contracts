@@ -127,9 +127,9 @@ contract Generic  {
     /// ... contract is initialized. An uncontrolled implementation
     /// ... contract might lead to misleading state
     /// ... for users who accidentally interact with it.
+    /// TODO: include pause()
     constructor() public {
         initialize();
-        pause();
     }
 
 
